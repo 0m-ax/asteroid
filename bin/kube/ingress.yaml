@@ -4,7 +4,7 @@ metadata:
   name: asteroid-ingress
 spec:
   rules:
-  - host: asteroid.things.maxc.in
+  - host: asteroid.maxc.in
     http:
       paths:
       - backend:
