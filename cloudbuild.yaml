@@ -40,7 +40,7 @@ steps:
   - --kubeconfig=bin/kubeconfig.yaml
   - image
   - deployment
-  - f-t-win-deployment
-  - f-t-win=gcr.io/$PROJECT_ID/asteroid:$BUILD_ID
+  - asteroid-deployment
+  - asteroid=gcr.io/$PROJECT_ID/asteroid:$BUILD_ID
 images:
 - 'gcr.io/$PROJECT_ID/asteroid:$BUILD_ID'
