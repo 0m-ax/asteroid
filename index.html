@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        .holder{
+            width: 100%;
+            position: relative;
+        }
+        .padding{
+            width: 100%;
+            height: 100%;
+        }
+        #layer{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            background-image: url("diego-ph-222506-ast.png");
+            background-size: 100%;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="padding">
+        <h1>Scroll down</h1>
+    </div>
+    <div class="holder">
+        <img src="diego-ph-222506-remove.png" width="100%">
+        <div id="layer">
+        
+        </div>
+    </div>
+    <div class="padding">
+        
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script>
+$( window ).scroll(function() {
+    var top = $(window).scrollTop()-$('#layer').offset().top;
+  $( "#layer" ).css( "background-position-x", top+"px" ).css( "background-position-y", top+"px" )
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asteroid-deployment
+  labels:
+    app: asteroid
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: asteroid
+  template:
+    metadata:
+      labels:
+        app: asteroid
+    spec:
+      containers:
+      - name: asteroid
+        image: gcr.io/main-194214/asteroid:latest
+        ports:
+        - containerPort: 80

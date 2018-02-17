@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: asteroid-ingress
+spec:
+  rules:
+  - host: asteroid.things.maxc.in
+    http:
+      paths:
+      - backend:
+          serviceName: asteroid-service
+          servicePort: 80
